@@ -25,19 +25,19 @@ void prints(char *s)
 
 void reversew(char *s)
 {
-	size_t slen = strlen(s);
+	int slen = strlen(s);
     
     // reverse all string
-    for (size_t i = 0; i < slen/2; i++) {
+    for (int i = 0; i < slen/2; i++) {
         char temp = s [i];
         s[i] = s [slen-i-1]; 
         s [slen-i-1] = temp;        
     }
 
     // reverse each word
-    for (size_t pos = 0, wlen = 0; pos <= slen; pos++, wlen++) {
+    for (int pos = 0, wlen = 0; pos <= slen; pos++, wlen++) {
     	if (s[pos] == ',' || s[pos] == '\0') {  
-    	    for (size_t i = 0; i < wlen/2; i++) {
+    	    for (int i = 0; i < wlen/2; i++) {
     	        char temp = s [pos - i - 1]; 
     	        s [pos - i - 1] = s[pos - wlen + i];
     	        s [pos - wlen + i] = temp;
