@@ -30,19 +30,19 @@ void reversew(char *s, char *delim)
     // reverse all string
     for (int i = 0; i < slen/2; i++) {
         char temp = s [i];
-        s[i] = s [slen-i-1]; 
+        s [i] = s [slen-i-1]; 
         s [slen-i-1] = temp;        
     }
 
     // reverse each word
     for (int pos = 0, wlen = 0; pos <= slen; pos++, wlen++) {
-    	if (s[pos] == *delim || s[pos] == '\0') {  
+    	if (s [pos] == *delim || s [pos] == '\0') {  
     	    for (int i = 0; i < wlen/2; i++) {
     	        char temp = s [pos - i - 1]; 
-    	        s [pos - i - 1] = s[pos - wlen + i];
+    	        s [pos - i - 1] = s [pos - wlen + i];
     	        s [pos - wlen + i] = temp;
     	    }
-    	    s[pos] = ' ';  
+    	    s [pos] = ' ';  
     	    pos++;
     	    wlen = 0;            
     	}
