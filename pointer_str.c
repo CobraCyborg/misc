@@ -2,13 +2,13 @@
 #include <string.h>
 
 void prints(char *s);
-void reversew(char *s);
+void reversew(char *s, char delim);
 
 int main(int argc, char const *argv[])
 {
 	char str[] = "No,description,website,or,topics,provided";
 	prints(str);
-	reversew(str);
+	reversew(str, ',');
 	prints(str);
 
 	return 0;
@@ -23,7 +23,7 @@ void prints(char *s)
 	putchar('\n');
 }
 
-void reversew(char *s)
+void reversew(char *s, char delim)
 {
 	int slen = strlen(s);
     
@@ -36,7 +36,7 @@ void reversew(char *s)
 
     // reverse each word
     for (int pos = 0, wlen = 0; pos <= slen; pos++, wlen++) {
-    	if (s[pos] == ',' || s[pos] == '\0') {  
+    	if (s[pos] == delim || s[pos] == '\0') {  
     	    for (int i = 0; i < wlen/2; i++) {
     	        char temp = s [pos - i - 1]; 
     	        s [pos - i - 1] = s[pos - wlen + i];
