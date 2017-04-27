@@ -30,8 +30,8 @@ void reversew(char *s, char *delim)
     // reverse all string
     for (int i = 0; i < slen/2; i++) {
         char temp = s [i];
-        s [i] = s [slen-i-1]; 
-        s [slen-i-1] = temp;        
+        s [i] = s [slen - i - 1]; 
+        s [slen - i - 1] = temp;        
     }
 
     // reverse each word
