@@ -16,8 +16,7 @@ int main(int argc, char const *argv[])
 
 void prints(char *s)
 {
-	for ( ; *s != '\0'; s++)
-	{
+	for ( ; *s != '\0'; s++) {
 		putchar(*s);
 	}
 	putchar('\n');
